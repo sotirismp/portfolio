@@ -16,6 +16,7 @@ function App() {
     "My name is Sotiris.",
     "This is my personal website.",
     "I'm still working on it",
+    "Take a glimpse of my ",
   ];
 
   return (

@@ -12,7 +12,7 @@ function Navbar(props: { isDark: boolean; toggleTheme: () => void }) {
         {props.isDark ? <CiLight /> : <CiDark />}
       </div>
       <div className="flex justify-center items-center gap-1 lg:gap-2">
-        <a
+        {/* <a
           className={` ${
             props.isDark ? "border-white" : "border-black"
           } border-2 text-lg ml-2 p-1 px-2 hover:border-yellow-400 font-mono rounded-md `}
@@ -20,7 +20,7 @@ function Navbar(props: { isDark: boolean; toggleTheme: () => void }) {
           target="_blank"
         >
           Resume
-        </a>
+        </a> */}
       </div>
     </div>
   );

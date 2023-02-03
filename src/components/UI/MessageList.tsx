@@ -12,6 +12,7 @@ function MessageList(props: { messages: string[]; isDark: boolean }) {
   const [m3, setM3] = useState(false);
   const [m4, setM4] = useState(false);
   const [m5, setM5] = useState(false);
+  const [m6, setM6] = useState(false);
 
   useEffect(() => {
     if (isInit) {
@@ -19,7 +20,7 @@ function MessageList(props: { messages: string[]; isDark: boolean }) {
       return;
     }
     divRef.current!.focus();
-  }, [m5]);
+  }, [m6]);
 
   const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value);
@@ -50,27 +51,22 @@ function MessageList(props: { messages: string[]; isDark: boolean }) {
         ></DrawLine>
       )}
       {m2 && (
-        <DrawLine
-          message={props.messages[1]}
-          changeState={setM3}
-          isGreeting={false}
-        ></DrawLine>
+        <DrawLine message={props.messages[1]} changeState={setM3}></DrawLine>
       )}
       {m3 && (
-        <DrawLine
-          message={props.messages[2]}
-          changeState={setM4}
-          isGreeting={false}
-        ></DrawLine>
+        <DrawLine message={props.messages[2]} changeState={setM4}></DrawLine>
       )}
       {m4 && (
-        <DrawLine
-          message={props.messages[3]}
-          changeState={setM5}
-          isGreeting={false}
-        ></DrawLine>
+        <DrawLine message={props.messages[3]} changeState={setM5}></DrawLine>
       )}
       {m5 && (
+        <DrawLine
+          message={props.messages[4]}
+          changeState={setM6}
+          isCV={true}
+        ></DrawLine>
+      )}
+      {m6 && (
         <div className="flex gap-2">
           <Prefix />
           <div className="flex overflow-hidden">
