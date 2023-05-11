@@ -34,7 +34,10 @@ function DrawLine(props: {
           <div className=" origin-hand animate-wave inline-block ">👋</div>
         )}
         {props.isCV && counter >= props.message.length && (
-          <a className="inline-block text-blue-500" href="https://7ps.xyz/cv">
+          <a
+            className="inline-block text-blue-500"
+            href="https://drive.google.com/file/d/1EOeuN9ljoFESKj21ZgfMepb6BhgQYw06/view"
+          >
             CV
           </a>
         )}
