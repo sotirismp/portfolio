@@ -1,12 +1,7 @@
 import React, { useState, useEffect, isValidElement } from "react";
 import Prefix from "./Prefix";
 
-function DrawLine(props: {
-  message: string;
-  changeState: (arg0: boolean) => void;
-  isGreeting?: boolean;
-  isCV?: boolean;
-}) {
+function DrawLine(props: { message: string; changeState: (arg0: boolean) => void; isGreeting?: boolean; isCV?: boolean }) {
   const [counter, setCounter] = useState(0);
   const [content, setContent] = useState("");
 
@@ -30,14 +25,9 @@ function DrawLine(props: {
       <Prefix />
       <div>
         {content}
-        {props.isGreeting && counter >= props.message.length && (
-          <div className=" origin-hand animate-wave inline-block ">👋</div>
-        )}
+        {props.isGreeting && counter >= props.message.length && <div className=" origin-hand animate-wave inline-block ">👋</div>}
         {props.isCV && counter >= props.message.length && (
-          <a
-            className="inline-block text-blue-500"
-            href="https://drive.google.com/file/d/1EOeuN9ljoFESKj21ZgfMepb6BhgQYw06/view"
-          >
+          <a className="inline-block text-blue-500" href="https://drive.google.com/file/d/1dopOOJ5IysvzE3Xm_iO3cQgLufOSa2an/view">
             CV
           </a>
         )}
